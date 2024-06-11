@@ -44,8 +44,7 @@ module.exports.login = async (req, res) => {
   const password = req.body.password
 
   const user = await User.findOne({
-    status: "active",
-    deleted: false,
+    status: 1,
     email: email
   })
 
